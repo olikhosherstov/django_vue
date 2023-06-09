@@ -22,7 +22,7 @@ export default {
     gridData: [],
   }),
   async beforeMount() {
-    let url = "http://127.0.0.1:8000/api/kortgreen/";
+    let url = "http://tennisvyshneve.pythonanywhere.com/api/kortgreen/";
     const config = {
       headers: {
         Authorization: "JWT " + this.$store.state.access,

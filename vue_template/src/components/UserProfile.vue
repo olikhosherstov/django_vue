@@ -28,7 +28,7 @@ export default {
   },
   async beforeMount() {
     let username = this.$store.state.userdata;
-    let url = "http://127.0.0.1:8000/api/profile/" + username + "/";
+    let url = "http://tennisvyshneve.pythonanywhere.com/api/profile/" + username + "/";
     const config = {
       headers: {
         Authorization: "JWT " + this.$store.state.access,

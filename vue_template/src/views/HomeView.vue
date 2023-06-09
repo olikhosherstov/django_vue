@@ -27,7 +27,7 @@ export default {
     };
   },
   async beforeMount() {
-    let response = await axios.get("http://127.0.0.1:8000/api/news/");
+    let response = await axios.get("http://tennisvyshneve.pythonanywhere.com/api/news/");
     this.newsItems = response.data;
   },
 };

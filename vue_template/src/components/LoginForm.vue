@@ -71,7 +71,7 @@ export default {
         };
         //Send form to api endpoint
         axios
-          .post("http://127.0.0.1:8000/api/token/", loginDetails)
+          .post("http://tennisvyshneve.pythonanywhere.com/api/token/", loginDetails)
           .then((response) => {
             console.log("Form submitted successfully", response.data);
             this.$store.commit("username", this.emaillogin);
