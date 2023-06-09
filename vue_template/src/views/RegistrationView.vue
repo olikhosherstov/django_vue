@@ -170,7 +170,10 @@ export default {
         formData.append("password", this.password);
         //Send form data to api endpoint
         axios
-          .post("http://tennisvyshneve.pythonanywhere.com/api/register/", formData)
+          .post(
+            "http://tennisvyshneve.pythonanywhere.com/api/register/",
+            formData
+          )
           .then((response) => {
             console.log("Form submitted successfully", response.data);
             this.LoginFormAppear = true;
