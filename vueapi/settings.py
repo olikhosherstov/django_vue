@@ -25,9 +25,10 @@ environ.Env.read_env()
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = env('DEBUG')
+#DEBUG = env('DEBUG')
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["127.0.0.1"]
 
 
 # Application definition
@@ -81,14 +82,22 @@ WSGI_APPLICATION = 'vueapi.wsgi.application'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': env('DATABASE_NAME'),
-        'USER': env('DATABASE_USER'),
-        'PASSWORD': env('DATABASE_PASS'),
-        'HOST': 'localhost',
-        'PORT': '5432',
-    }
+#    'default': {
+#        'ENGINE': 'django.db.backends.postgresql',
+#        'NAME': env('DATABASE_NAME'),
+#        'USER': env('DATABASE_USER'),
+#        'PASSWORD': env('DATABASE_PASS'),
+#        'HOST': 'localhost',
+#        'PORT': '5432',
+#    }
+   'default': {
+       'ENGINE': 'django.db.backends.mysql',
+       'NAME': env('DATABASE_NAME'),
+       'USER': env('DATABASE_USER'),
+       'PASSWORD': env('DATABASE_PASS'),
+       'HOST': 'localhost',
+       'PORT': '3306',
+   }
 }
 
 

@@ -2,7 +2,7 @@ import datetime
 import json
 import locale
 from django.http import Http404, JsonResponse
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from rest_framework import generics, viewsets, mixins
 from rest_framework.decorators import action, api_view, permission_classes
 from rest_framework.generics import get_object_or_404
@@ -309,3 +309,7 @@ def booking_red_update(request):
             user=user
         ).delete()
         return JsonResponse({"msg": "Record was deleted"})
+
+
+def view_404(request, exception=None):
+    return redirect('')

@@ -57,7 +57,14 @@ class Profile(AbstractUser):
     birth_date = models.DateField(null=True, blank=True, verbose_name="День народження")
     phone = models.CharField(null=True, blank=True, max_length=30, verbose_name="Телефон")
     photo = models.ImageField(blank=True, upload_to="photos/")
-    city = models.CharField(max_length=30, blank=True)
+    CITY_CHOICES = [
+        ("Вишневе", _("Вишневе")),
+        ("Крюківщина", _("Крюківщина")),
+        ("Соф. Борщагівка", _("Соф. Борщагівка")),
+        ("Київ", _("Київ")),
+        ("інше", _("інше")),
+    ]
+    city = models.CharField(max_length=30, default="Вишневе", choices=CITY_CHOICES)
     is_booking_period = models.BooleanField(default=False, verbose_name="Чи є бронювання періоду?")
 
     CORT_CHOICES = [
