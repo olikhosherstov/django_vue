@@ -127,8 +127,8 @@ class BookingModelGreen(models.Model):
     )
 
     class Meta:
-        verbose_name = "Бронювання корту"
-        verbose_name_plural = "Бронювання корту"
+        verbose_name = "Бронювання зеленого корту"
+        verbose_name_plural = "Бронювання зеленого корту"
 
     def __str__(self):
         return self.period + " " + self.booking_date.strftime("%d-%m-%Y") + " " + self.user.__str__()
@@ -167,8 +167,8 @@ class BookingModelRed(models.Model):
     )
 
     class Meta:
-        verbose_name = "Бронювання корту"
-        verbose_name_plural = "Бронювання корту"
+        verbose_name = "Бронювання червоного корту"
+        verbose_name_plural = "Бронювання червоного корту"
 
     def __str__(self):
         return self.period + " " + self.booking_date.strftime("%d-%m-%Y") + " " + self.user.__str__()

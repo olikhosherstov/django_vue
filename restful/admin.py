@@ -46,3 +46,17 @@ class BookingModelGreenAdmin(admin.ModelAdmin):
 
     delete_last_month_bookings.short_description = "Видалити неактуальні дані"
 
+
+@admin.register(BookingModelRed)
+class BookingModelRedAdmin(admin.ModelAdmin):
+    list_display = ("period", "booking_date", "user", "cort")
+    search_fields = ("booking_date", )
+    date_hierarchy = "booking_date"
+    actions = ['delete_last_month_bookings']
+
+    def delete_last_month_bookings(self, request, queryset):
+        current_month = datetime.datetime.now().month
+        queryset.filter(booking_date__month__lt=current_month).delete()
+
+    delete_last_month_bookings.short_description = "Видалити неактуальні дані"
+
