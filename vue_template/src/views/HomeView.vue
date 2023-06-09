@@ -28,7 +28,7 @@ export default {
   },
   async beforeMount() {
     let response = await axios.get(
-      "http://tennisvyshneve.pythonanywhere.com/api/news/"
+      "https://tennisvyshneve.pythonanywhere.com/api/news/"
     );
     this.newsItems = response.data;
   },

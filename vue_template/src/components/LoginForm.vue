@@ -72,7 +72,7 @@ export default {
         //Send form to api endpoint
         axios
           .post(
-            "http://tennisvyshneve.pythonanywhere.com/api/token/",
+            "https://tennisvyshneve.pythonanywhere.com/api/token/",
             loginDetails
           )
           .then((response) => {

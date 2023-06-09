@@ -171,7 +171,7 @@ export default {
         //Send form data to api endpoint
         axios
           .post(
-            "http://tennisvyshneve.pythonanywhere.com/api/register/",
+            "https://tennisvyshneve.pythonanywhere.com/api/register/",
             formData
           )
           .then((response) => {

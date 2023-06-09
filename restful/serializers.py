@@ -35,8 +35,7 @@ class ProfileSerializer(serializers.ModelSerializer):
             required=True,
             validators=[UniqueValidator(queryset=Profile.objects.all())]
             )
-
-    password = serializers.CharField(write_only=True, required=True, validators=[validate_password])
+    #password = serializers.CharField(write_only=True, required=True, validators=[validate_password])
     gender = ChoiceField(choices=Profile.GENDER_CHOICES)
 
     class Meta:

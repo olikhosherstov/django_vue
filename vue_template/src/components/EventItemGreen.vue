@@ -28,7 +28,8 @@ export default {
     setUserdata(event) {
       var innertext = event.target.innerHTML;
       let user = this.userProfile.first_name + " " + this.userProfile.last_name;
-      let url = "http://tennisvyshneve.pythonanywhere.com/api/kortgreenupdate/";
+      let url =
+        "https://tennisvyshneve.pythonanywhere.com/api/kortgreenupdate/";
       const headers = {
         Authorization: "JWT " + this.$store.state.access,
         "Content-Type": "application/json",

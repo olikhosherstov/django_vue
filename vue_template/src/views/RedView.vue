@@ -22,7 +22,7 @@ export default {
     gridData: [],
   }),
   async beforeMount() {
-    let url = "http://tennisvyshneve.pythonanywhere.com/api/kortred/";
+    let url = "https://tennisvyshneve.pythonanywhere.com/api/kortred/";
     const config = {
       headers: {
         Authorization: "JWT " + this.$store.state.access,
