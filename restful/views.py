@@ -9,7 +9,6 @@ from rest_framework.generics import get_object_or_404
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
 
-from .forms import BookingAddForm
 from .models import *
 from .serializers import *
 
@@ -313,3 +312,7 @@ def booking_red_update(request):
 
 def view_404(request, exception=None):
     return redirect('')
+
+
+def index(request):
+    return render(request, 'index.html')
