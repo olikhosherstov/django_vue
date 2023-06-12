@@ -1,7 +1,11 @@
 <template>
   <div class="card">
     <h1>Профіль користувача</h1>
-    <img src="img.jpg" alt="Test user" style="width: 100%" />
+    <img
+      :src="userProfile.photo"
+      :alt="userProfile.first_name"
+      style="width: 100%"
+    />
     <h1>{{ userProfile.first_name }} {{ userProfile.last_name }}</h1>
 
     <p class="title">E-mail: {{ userProfile.username }}</p>

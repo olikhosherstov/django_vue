@@ -59,12 +59,6 @@ export default {
     submitForm(event) {
       event.preventDefault();
       if (event.target.checkValidity()) {
-        // console.log("Form submitted");
-        // const formData = new FormData();
-        // formData.append("username", this.email);
-        // formData.append("password", this.password);
-        // console.log(this.emaillogin);
-        // console.log(this.password);
         var loginDetails = {
           username: this.emaillogin,
           password: this.password,
@@ -87,15 +81,6 @@ export default {
             alert("Логін або пароль неправильні.");
             // Handle error
           });
-
-        //Mock object to login
-        // if (this.password == this.userdata.password) {
-        //   console.log("Enter to booking");
-        //   this.updateConnection();
-        //   this.$router.push("profile");
-        // } else {
-        //   alert("Логін або пароль неправильні.");
-        // }
       } else {
         console.log("Form validation failed");
       }

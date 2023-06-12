@@ -177,6 +177,7 @@ export default {
           .then((response) => {
             console.log("Form submitted successfully", response.data);
             this.LoginFormAppear = true;
+            alert("Ви успішно зареєструвались на нашому сервісі.");
             // Handle response
           })
           .catch((error) => {
